@@ -64,6 +64,25 @@ header {
 	text-decoration: none;
 }
 
+/* Starting media queries for .top-nav */
+
+@media (max-width: 699px) {
+	.top-nav a {
+		font-size: .025em;
+	}
+}
+
+@media (max-width: 407px) {
+	.top-nav ul {
+		text-align: center;
+	}
+	.top-nav li {
+		padding-right: 10px;
+	}
+}
+
+/* Ending media queries for .top-nav */
+
 a > span {
 	background-color: #000;
 	color: lightblue;
@@ -158,7 +177,7 @@ a > span {
 
 .center-nav li {
 	display: inline-block;
-	margin-right: 30px;
+	margin: 0 15px;
 }
 
 .center-nav a {
@@ -166,6 +185,24 @@ a > span {
 	text-transform: uppercase;
 	color: #fff;
 }
+
+/* start media queries for .center-nav */
+@media (max-width: 699px) {
+	.center-nav {
+		padding-top: 10px;
+	}
+
+	.center-nav a {
+		font-size: .025em;
+	}
+}
+
+@media (max-width: 407px) {
+	.center-nav li {
+		margin-right: 10px;
+	}
+}
+/* end media queries */
 
 .container {
 	text-align: center; 
@@ -187,12 +224,13 @@ a > span {
 	background-size: contain;
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin: 0 40px 20px 0;
+	margin: 15px 10px;
 }
 
 .button {
-	clear: both;
+	display: inline-block;
 	background-color: #f1f1f1;
+	margin-top: 30px;
 	padding: 10px;
 	border-radius: 5px;
 }
@@ -211,26 +249,44 @@ a > span {
 	background-color: #f1f1f1;
 }
 
-.features-two div {
-	width: 30%;
+.features-two i {
+	font-size: 135px;
 }
 
 .desktop-screen {
-	text-align: right;
+	width: 30%;
 	display: inline-block;
-	margin-right: 40px;
-	font-size: 32px;
 }
 
 .features-info {
+	display: inline-block;
+	width: 60%;
+	margin: 0 20px;
+}
+
+.top{
 	text-align: left;
 	display: inline-block;
-	vertical-align: top;
-	padding-top: 10px;
+}
+
+.one{
+	text-align: right;
+	display: inline-block;
+	font-size: 32px;
+}
+
+.two{
+	text-align: left;
+	display: inline-block;
+	font-size: 32px;
+}
+
+.bottom{
+	text-align: right;
+	display: inline-block;
 }
 
 .features-info h3 {
-	margin-bottom: 10px;
 	text-transform: capitalize;
 }
 
@@ -248,11 +304,9 @@ a > span {
 	border: none;
 }
 
-hr {
-	margin: 0 auto;
+.middle-hr {
+	margin: 60px auto;
 	max-width: 60%;
-	margin-top: 50px;
-	margin-bottom: 50px;
 }
 
 .bottom button {
@@ -407,21 +461,22 @@ hr {
 	font-size: 10px;
 }
 
-.contact input {
-	width: 30%;
-	margin-bottom: 10px;
-}
-
-.contact input:first-child {
+form {
 	margin-top: 40px;
+	padding-bottom: 10px;
 }
 
-.contact textarea {
+input, textarea {
+	display: block;
+	margin: 12px auto;
+	border: none;
 	width: 30%;
+	border-radius: 2px;
+	padding: 5px;
 }
 
-.contact form {
-	padding-bottom: 40px;
+textarea {
+	resize: none;
 }
 
 .contact button {
@@ -435,30 +490,41 @@ hr {
 
 /*==SECTION: Horizontal ruler==*/
 
-hr {
-	color: black;
+.end-hr {
+	border-color: black;
+	margin: 40px auto 8px;
 	width: 50%;
-	margin-bottom: 10px;
 }
 
 /*==FOOTER AREA==*/
 
 /*QUESTION: Why can't I get the social icons to round and change color?*/
-footer div {
-	width: 30%;
-	display: inline-block;
-	padding: 20px 0;
+footer {
+	text-align: center;
+	padding: 20px;
 }
 
-#social-bottom .fa-stack-1 {
+#social-bottom {
+	display: inline-block;
+	width: 25%;
+	text-align: left;
+}
+
+.fa-stack-1 {
 	color: yellow;
 }
 
-footer small {
+small {
 	font-size: 10px;
 	color: lightgrey;
 }
 
-div.copyright span {
+.copyright {
+	display: inline-block;
+	text-align: right;
+	width: 25%;
+}
+
+.copyright span {
 	color: orange;
 }
